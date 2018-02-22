@@ -11,9 +11,9 @@ var iotaProxy = require('./lib/iotaproxy.js');
 
 iotaProxy.start(
   {
-    host: 'https://nodes.thetangle.org',
-    port: 443,
-    localPort: 14265,
+    host: 'http://node02.iotatoken.nl',
+    port: 14265,
+    localPort: 14266,
     overrideAttachToTangle: true,
     timeout: 15
   }
