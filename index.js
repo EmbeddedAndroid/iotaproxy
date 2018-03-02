@@ -9,12 +9,17 @@
 
 var iotaProxy = require('./lib/iotaproxy.js');
 
+var HOST = process.env.HOST || 'http://iota.bitfinex.com';
+var PORT = process.env.PORT || 80;
+var PROXY_PORT = process.env.PROXY_PORT || 14266;
+var POW_TIMEOUT = process.env.POW_TIMEOUT || 25;
+
 iotaProxy.start(
   {
-    host: 'http://iota.bitfinex.com',
-    port: 80,
-    localPort: 14266,
+    host: HOST,
+    port: PORT,
+    localPort: PROXY_PORT,
     overrideAttachToTangle: true,
-    timeout: 25
+    timeout: POW_TIMEOUT
   }
 );
